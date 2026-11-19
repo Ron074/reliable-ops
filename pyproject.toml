@@ -1,0 +1,18 @@
+[project]
+name = "reliable-ops"
+version = "0.1.0"
+description = "Small, tested building blocks for unattended automation jobs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+live = ["anthropic"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["reliable_ops"]

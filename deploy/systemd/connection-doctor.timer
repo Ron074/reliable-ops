@@ -1,0 +1,11 @@
+[Unit]
+Description=Run connection-doctor every 10 minutes
+
+[Timer]
+OnCalendar=*:0/10
+# If the machine was off at a scheduled time, run once when it comes back.
+Persistent=true
+RandomizedDelaySec=30
+
+[Install]
+WantedBy=timers.target

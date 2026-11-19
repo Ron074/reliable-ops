@@ -1,0 +1,10 @@
+{"conn": "acct-0003", "status": "ok", "t": "2026-11-19T13:00:02.114Z"}
+{"conn": "acct-0007", "status": "ok", "t": "2026-11-19T13:00:05.871Z"}
+{"conn": "acct-0012", "status": "rate_limited", "t": "2026-11-19T13:02:41.006Z", "detail": "HTTP 429 from provider"}
+{"conn": "acct-0024", "status": "mfa_required", "t": "2026-11-19T13:04:12.552Z", "detail": "one-time code requested"}
+{"conn": "acct-0007", "status": "auth_expired", "t": "2026-11-19T13:05:59.230Z", "detail": "refresh token revoked"}
+this line is corrupted on purpose
+{"conn": "acct-0019", "status": "provider_error", "t": "2026-11-19T13:07:30.900Z", "detail": "HTTP 503 from provider"}
+{"conn": "acct-0024", "status": "ok", "t": "2026-11-19T13:09:01.004Z"}
+{"conn": "acct-0031", "status": "mfa_required", "t": "2026-11-19T13:10:44.318Z", "detail": "one-time code requested"}
+{"conn": "acct-0040", "status": "unknown_error", "t": "2026-11-19T13:11:20.777Z", "detail": "unexpected page layout"}

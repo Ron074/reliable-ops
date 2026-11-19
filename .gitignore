@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.env
+*.key
+*.pem
+# outputs written by the example job
+examples/data/*.lock
+examples/data/run_status.json
+examples/data/triage_report.md

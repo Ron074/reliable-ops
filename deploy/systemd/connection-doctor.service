@@ -1,0 +1,17 @@
+# Example unit: runs the job once. Paths and user are placeholders.
+[Unit]
+Description=Triage broken account connections (one run)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=app
+WorkingDirectory=/srv/myapp
+ExecStart=/srv/myapp/venv/bin/python examples/connection_doctor.py
+# Belt and braces: the job has its own deadline, systemd kills it if that ever fails.
+TimeoutStartSec=20min
+# Keep a runaway job from taking the whole machine down (lesson: one research job once
+# exhausted memory and froze a small server).
+MemoryMax=700M
+Nice=10

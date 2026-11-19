@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.14"]   # oldest supported (pyproject) and newest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # Standard library only: nothing to install. The deploy tests run the real
+      # script under Linux bash here, so they are not skipped.
+      - run: python -m unittest discover -v
+      - run: python examples/connection_doctor.py
